@@ -6,7 +6,7 @@ export async function clientLoader({ params }: Route.LoaderArgs) {
   const res = await fetch(
     `https://pw-d20261017a29.plainwork-apps.workers.dev/v3.1/name/${encodeURIComponent(countryName)}?fullText=true`,
   );
-  const data = res.json();
+  const data = await res.json();
   return data;
 }
 

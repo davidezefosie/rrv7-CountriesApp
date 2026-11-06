@@ -55,17 +55,18 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredCountries.map((country: any, key: number) => (
-            <li
-              key={key}
-              className="bg-white border border-gray-200 rounded-xl p-4 shadow hover:shadow-lg transition"
-            >
-              <Link to={`/countries/${country.name.common}`}>
+            <Link to={`/countries/${country.name.common}`}>
+              <li
+                key={key}
+                className="bg-white border border-gray-200 rounded-xl p-4 shadow hover:shadow-lg transition"
+              >
                 {country.name.common}
-              </Link>
-              <div>
-                Region: {country.region} | Population: {country.population}
-              </div>
-            </li>
+
+                <div>
+                  Region: {country.region} | Population: {country.population}
+                </div>
+              </li>
+            </Link>
           ))}
         </ul>
       )}
