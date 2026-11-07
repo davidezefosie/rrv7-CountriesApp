@@ -3,8 +3,8 @@ import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "RESTExplorer" },
-    { name: "Check out country data!", content: "Welcome to RestExplorer." },
+    { title: "COUNTRIESExplorer" },
+    { name: "Check out country data!", content: "Welcome to COUNTRIESExplorer." },
   ];
 }
 
